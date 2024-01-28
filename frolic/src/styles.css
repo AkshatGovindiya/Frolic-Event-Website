@@ -1,0 +1,258 @@
+#main {
+  background-color: #010314;
+}
+
+#eventtimeline{
+  background-image: url(../assets/brain.jpg);
+  background-size: cover;
+  
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+
+}
+
+nav ul li{
+  margin: 0 20px;
+}
+nav ul li .link{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: 2px 2px 10px #00ffd5;
+  transition: all 0.1s ease-in-out;
+}
+
+nav ul li .link:hover {
+  color: #63e;
+  font-size: 28px;
+  text-shadow: 1px 1px 20px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+
+#title :hover {
+  transform: rotateY(360deg);
+  cursor: pointer;
+  transition: 2s transform;
+}
+
+#header {
+  background: radial-gradient(transparent 37.41%, #63e 69.27%, #fff 100%);
+  border-radius: 50px;
+}
+#pastEvent {
+  background: radial-gradient(
+    140% 107.13% at 50% 10%,
+    transparent 37.41%,
+    #63e 69.27%,
+    #fff 100%
+  );
+  border-radius: 50px;
+  border-color: 2px solid #63e;
+}
+#pastEvent img {
+  margin-left: 5px;
+  margin-bottom: 5px;
+  animation-name: imgAni;
+  animation-duration: 2s;
+}
+@keyframes imgAni {
+  from {
+    left: -20px;
+  }
+  to {
+    left: 200px;
+  }
+}
+#simple {
+  background: radial-gradient(
+    140% 107.13% at 50% 10%,
+    transparent 37.41%,
+    #63e 69.27%,
+    #fff 100%
+  );
+}
+#submitBTN {
+  background: radial-gradient(
+    100% 100% at 50% 50%,
+    transparent 37.41%,
+    #63e 69.27%,
+    #fff 100%
+  );
+}
+
+#logo img {
+
+  animation-name: myAni;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes myAni {
+  0% {
+    background-color: white;
+    border-radius: 20px;
+    transform: rotateY(360deg);
+  }
+  50% {
+    background-color: #010314;
+  }
+  100% {
+    background-color: white;
+    border-radius: 20px;
+  }
+}
+#rule{
+  background-image: url(..//assets/eye.jpg);
+  background-size: cover; 
+  text-shadow: 2px 10px 10px black;
+}
+
+#rule li {
+  margin-bottom: 10px;
+}
+#EventTime {
+  font-family: Cantarell;
+}
+.event-timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.event-item {
+  color: #010314;
+  background-image: linear-gradient(to bottom, #63e, white);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 10px red;
+  transition: transform 0.3s;
+}
+
+.event-item:hover {
+  transform: translateY(-20px);
+}
+
+@media (max-width: 768px) {
+  .event-item {
+    width: 100%;
+  }
+}
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.image-container img {
+  transition: transform 0.4s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+#events {
+  border-radius: 30px;
+  background: radial-gradient(
+    100% 100% at 50% 50%,
+    transparent 37.41%,
+    #63e 69.27%,
+    #fff 100%
+  );
+}
+#eventTitle{
+  color: white;
+  text-shadow: 1px 1px 40px darkblue, 0 0 30px blue, 0 0 25px darkblue;
+}
+#register-btn {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+#register-btn:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+#register-btn:active {
+  color: #000
+}
+
+#register-btn:active:after {
+  background: transparent;
+}
+
+#register-btn:hover:before {
+  opacity: 1;
+}
+
+#register-btn:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+#event{
+  height: 15vh;
+}
+#event ul li{
+  padding: 10px;
+  text-align: center;
+  list-style: none;
+  border-radius: 10%;
+  transition: all 0.1s ease-in-out;
+}
+
+#event ul li:hover{
+  text-shadow: 2px 10px 5px black;
+  font-size: 22px;
+  cursor: pointer;
+  background-color: #63e;
+}
